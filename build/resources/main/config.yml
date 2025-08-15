@@ -1,0 +1,36 @@
+# LuisCoins Configuration
+storage: yaml  # yaml or json
+starting-balance: 0
+autosave-minutes: 5
+# Earn command configuration
+earn:
+  enabled: true
+  require-permission: false
+  # Cooldown in minutes between /earn uses per player
+  cooldown-minutes: 1440
+  # Optional cap per /earn use; if 0, use requested amount
+  max-per-use: 100
+# Rank multipliers by permission node. Highest matching permission wins.
+rank-multipliers:
+  luis.rank.vip: 1.25
+  luis.rank.mvp: 1.5
+  luis.rank.owner: 2.0
+# Messages
+messages:
+  prefix: "&6[Coins]&r "
+  balance-self: "&eYou have &a%amount% &ecoins."
+  balance-other: "&e%player% has &a%amount% &ecoins."
+  paid: "&aYou paid &e%player% &a%amount% coins."
+  received: "&aYou received &a%amount% coins from &e%player%&a."
+  not-enough: "&cYou do not have enough coins."
+  invalid-amount: "&cInvalid amount."
+  player-not-found: "&cPlayer not found."
+  reloaded: "&aLuisCoins reloaded."
+  set: "&aSet &e%player%&a's balance to &a%amount% coins."
+  added: "&aAdded &a%amount% coins to &e%player%&a."
+  removed: "&aRemoved &c%amount% coins from &e%player%&a."
+  reset: "&aReset &e%player%&a's balance."
+  earned: "&aYou earned &a%amount% coins!"
+  earn-cooldown: "&cYou must wait %minutes%m before earning again."
+  top-header: "&6Top 10 Richest Players:"
+  top-line: "&e#%rank% &6%player%: &a%amount%"

@@ -1,0 +1,55 @@
+name: LuisCoins
+main: com.luiscoins.LuisCoinsPlugin
+version: 1.0.0
+author: Luis
+softdepend: [LuckPerms]
+commands:
+  balance:
+    description: Show coin balance
+    usage: /balance [player]
+    aliases: [bal]
+  pay:
+    description: Pay a player coins
+    usage: /pay <player> <amount>
+  earn:
+    description: Earn coins (may have cooldown)
+    usage: /earn <amount>
+  luisbal:
+    description: Check balances or top list
+    usage: /luisbal [player|top]
+    aliases: [lbal]
+  luis:
+    description: Admin controls
+    usage: /luis <add|remove|reset|set|reload>
+permissions:
+  luiscoins.balance.others:
+    description: View others' balances
+    default: false
+  luiscoins.pay:
+    description: Pay other players
+    default: true
+  luiscoins.earn:
+    description: Use /earn command
+    default: true
+  luiscoins.top:
+    description: View top balances
+    default: true
+  luiscoins.admin:
+    description: Admin permission for all luis commands
+    default: op
+    children:
+      luiscoins.admin.add: true
+      luiscoins.admin.remove: true
+      luiscoins.admin.reset: true
+      luiscoins.admin.set: true
+      luiscoins.admin.reload: true
+  luiscoins.admin.add:
+    default: op
+  luiscoins.admin.remove:
+    default: op
+  luiscoins.admin.reset:
+    default: op
+  luiscoins.admin.set:
+    default: op
+  luiscoins.admin.reload:
+    default: op
